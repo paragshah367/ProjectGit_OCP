@@ -15,7 +15,7 @@ s.proxies = proxies
 def set_charge_behaviour():
 
     headers = {'Content-Type': 'application/xml'}
-    url = "http://smarty.boku.com/test-api/msisdn/"+str(test_data)+"/charge-behavior"
+    url = "http://smrt.boku.com/testapi/msisdn/"+str(test_data)+"/chrge-behavior"
     data = """<?xml version='1.0' encoding='utf-8'?>
     <charge-behavior error-code="0"/>"""
 
@@ -27,10 +27,10 @@ def set_charge_behaviour():
 
 def send_mo():
     headers = {'Content-Type': 'application/json'}
-    url = "http://smarty.boku.com/smarty/mo";
+    url = "http://smrt.boku.com/smarty/mo";
     data = {
         "type": "MO",
-        "source": {"type":"msisdn", "number":test_data, "networkCode":network,"countryCode":"CA"},
+        "source": {"type":"msisdn", "networkCode":network, "countryCode":"CA"},
         "destination": {"type": "shortcode", "number": "43026"},
         "mappedData": {"MSG_BODY": "Y"}
         }
