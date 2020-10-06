@@ -10,8 +10,8 @@ def db_conn(query):
         mydb = mysql.connector.connect(
           host='localhost',
           port='3308',
-          user='dev',
-          passwd='dev')
+          user='sample',
+          passwd='sample')
 
         mycursor = mydb.cursor()
         # mycursor.execute('SELECT * FROM subscription.subscriptionplan order by id desc limit 2;')
